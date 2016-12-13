@@ -1,0 +1,14 @@
+2016.12.13 KJC
+
+  The machine emulator as I would do it.
+
+  Note that the following are useful binary conversions in Python.
+
+      x = "1111"
+      y = int(x, base=2)        # Converts binary string to integer value
+      print(y)                  # Prints integer as a decimal value
+      print("{0:b}".format(y))  # Prints integer as a binary value
+      z = 0b1111                # Assign an integer as a binary value
+      print(z)                  # Print integer as a decimal value
+  ____________________________________________________________________________
+
