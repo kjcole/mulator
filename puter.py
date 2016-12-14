@@ -69,9 +69,12 @@ class CPU:
         self.ram = [0] * 8192  # This has a whopping 8 KB of RAM !!!
         self.instruction_set = {0b1000: self.reboot,
                                 0b1001: self.add,
-                                0x1010: self.store,
-                                0x1011: self.load,
-                                0x1100: self.prn}
+                                0b1010: self.store,
+                                0b1011: self.load,
+                                0b1100: self.inc,
+                                0b1101: self.dec,
+                                0b1110: self.sub,
+                                0b1111: self.prn}
 
     def reboot(self):
         """Reinitialize everything on a reboot"""
@@ -89,6 +92,18 @@ class CPU:
         """Load value from memory address into accumulator"""
         self.accumulator = self.ram[address]
 
+    def inc(self):
+        """Increment accumulator"""
+        self.accumulator += 1
+
+    def dec(self):
+        """Decrement accumulator"""
+        self.accumulator -= 1
+
+    def sub(self, address):
+        """Subtract value at address from value in accumulator"""
+        self.accumulator -= self.ram[address]
+
     def prn(self, address):
         """Print value at memory address to monitor"""
         self.monitor = self.ram[address]
@@ -105,7 +120,12 @@ def main():
                   __license__))
 
     cpu = CPU()
-    cpu.instruction_set[0x1010](0b1010)  # Print what's at location 1010
+    cpu.instruction_set[0b1011](0b1010)  # Load address 0b1010 into accumulator
+    cpu.instruction_set[0b1100]()        # Increment accumulator
+    cpu.instruction_set[0b1100]()        # Increment accumulator
+    cpu.instruction_set[0b1100]()        # Increment accumulator
+    cpu.instruction_set[0b1010](0b1010)  # Store accumulator to address 0b1010
+    cpu.instruction_set[0b1111](0b1010)  # Print what's at address 1010
 
     return 0
 
