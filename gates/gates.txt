@@ -1,0 +1,31 @@
+<p>The images used here were found in the Wikipedia article <a
+href="https://en.wikipedia.org/wiki/Logic_gate">Logic gate</a> and
+were credited as "By jjbeard - Own Drawing, made in Inkscape 0.43,
+Public Domain".</p>
+
+<p>There appear to be two standard shape sets: The ANSI distinctive
+standard shapes, which I learned, and the simpler, rectangular IEC
+standard shapes. I have included links to the original art for both
+sets, but will be using the ANSI shapes.</p>
+
+<h3>ANSI (IEEE Std 91/91a-1991)</h3>
+<ul>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830763">AND</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830758">OR</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830766">NOT</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830762">NAND</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830761">NOR</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830757">XOR</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830756">XNOR</a></li>
+</ul>
+
+<h3>IEC (IEEE Std 91/91a-1991; IEC 60617-12 : 1997)</h3>
+<ul>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830733">AND</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830744">OR</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830955">NOT</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830742">NAND</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830743">NOR</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830747">XOR</a></li>
+<li><a href="https://commons.wikimedia.org/w/index.php?curid=830749">XNOR</a></li>
+</ul>

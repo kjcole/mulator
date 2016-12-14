@@ -1,0 +1,214 @@
+/************************************************************************
+ *    NAME: styles.css                                                  *
+ *  AUTHOR: Kevin Cole <kevin.cole@gallaudet.edu>                       *
+ *   WHERE: NOVA Web Development                                        *
+ * LASTMOD: 2014.06.05                                                  *
+ * PURPOSE: This is the cascading style sheet (CSS) for the NOVA Web    *
+ *          Development website. It is evolving from gri.css, used for  *
+ *          many years by the Gallaudet Research Institute.             *
+ *                                                                      *
+ * Copyright (c) 2014 Kevin Cole <kevin.cole@gallaudet.edu>             *
+ ************************************************************************/
+
+@page {
+    size: 8.5in 11in;
+}
+
+body {
+    background-color: #ADBAE7;
+    color: #000000;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    margin: 0;
+/*  position: static;  */
+    width: 100%;
+/*  height: auto;  */
+}
+
+/* WAS 1c577f will be #2477AA */
+
+header {
+    background: none repeat scroll 0 0 #0005b3;
+    box-shadow: 14px 0 25px 11px rgba(0, 43, 70, 0.64);
+    margin: 1% 1% 4%;
+/*  position: static; */
+    width: 98%;
+    border-radius: 50px 50px 50px 50px;
+}
+
+#logo{
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 17%;
+    margin-bottom: 2%;
+}
+
+nav {
+    float: right;
+    margin-top: 3%;
+/*  position: static; */
+    margin-right: 5%;
+}
+
+nav ul {
+    color: rgb(255, 255, 255);
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+     width: 2vw; 
+
+}
+
+nav ul li a {
+    border-color: white turquoise;
+    border-radius: 1px;
+    border-style: solid;
+    border-width: medium thick;
+    color: #ffffff;
+    font-size: 1.3vw;
+    padding: 3px 19px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.handle {
+     width: 100%;
+     text-align: right;
+     box-sizing: border-box;
+     display: none;
+     color: #ffffff;
+
+}
+
+#icon {
+    float: right;
+    width: 7%;
+/*  position: relative;  */
+    box-sizing: border-box;
+    margin-top: -9.5%;
+    margin-right: 3%;
+}
+
+article {
+    background-color: #ffffff;
+    border-radius: 15px;
+    clear: both;
+    color: #548ccd;
+    margin: auto;
+    min-height: 400px;
+    padding: 10px;
+/*  position: relative;  */
+    top: 9px;
+    width: 85%;
+    box-shadow: 8px 0 16px 8px rgba(0, 43, 70, 0.36);
+}
+
+.columns {
+/*  position: static; */
+    display: table-cell;
+    font-size: 1.8vw;
+}
+
+h2 {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    color: #222222;
+    margin-left: -3px;
+    margin-top: 33px;
+}
+
+footer {
+    background-color: #6D8AEC;
+/*  position: static; */
+    width: 100%;
+    margin: 16% auto auto;
+/*  height: auto;  */
+}
+
+footer #social {
+    width:   300px;
+    margin:  auto;
+}
+
+footer img {
+    border: 0 none;
+    height: 90px;
+    margin: 15px auto;
+    width: 90px;
+}
+
+footer #legal {
+    font-size: 10pt;
+    margin: 5px auto;
+    text-align: center;
+}
+
+/***********************************************************************/
+
+.main img {
+    width: 100%;
+ 
+}
+
+p {
+    margin: 1.2em 1em;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    line-height: 2.125;
+    color: #222222;
+}
+
+h1 {
+    color: #ffff7f;
+    margin: 1em 1em 1.2em;
+}
+
+/*Profile CSS*/
+
+.profile {
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.pro-image {
+    padding-right: 10px;
+    float: left;
+}
+
+@media screen and (min-width : 300px) and (max-width: 800px) {
+  .columns {
+       width: 100%;
+       display: block;
+  }
+
+  h2 {
+      font-size: 2em;
+  }
+
+  nav {
+      display: none;
+  }
+
+  nav ul li:hover {
+      background: #0066FF;
+      color: white;
+  }
+
+  nav ul li a {
+      width: 100%;
+      box-sizing: border-box;
+      padding : 15px;
+      text-align: left;
+      border: none;
+      margin-left: 0;
+      font-size: 5.7vw;
+  }
+
+  .handle {
+      display: block;
+      cursor: pointer;
+  }
+}
