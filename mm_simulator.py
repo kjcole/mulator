@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 #
 #  Mythical Machine Simulator
 #
@@ -110,7 +111,16 @@ def loadProgram(file):
 
 def main():
     global pReg, iReg, reg, mem
-    loadProgram(sys.argv[1])
+    if len(sys.argv) == 2:
+        program = sys.argv[1]
+    elif len(sys.argv) == 1:
+        program = input("Enter machine code filename []: ")
+    else:
+        print("Too many arguments.")
+        print("Usage:")
+        print("  mm_simulator.py filename")
+        raise Exception
+    loadProgram(program)
     print("\033[1;1H\033[0J{0}".format(panel))
     pReg = 100
     updatePanel('pReg', pReg)
