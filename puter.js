@@ -27,7 +27,7 @@ for (row = 0; row < 9; row++) {
     field.size = 8;                   // Holds eight characters
     field.pattern = "[01]{8}";        // Validation: 8 binary digits
     field.placeholder = "00000000";   // Visual indicator
-    field.defaultValue = "00000000";  // Default value
+//  field.defaultValue = "00000000";  // Default value
     td.appendChild(field);
   }
 }

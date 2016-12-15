@@ -146,6 +146,7 @@ article {
 
 input {
     font-family: monospace;
+    direction: rtl;
 }
 
 .address {
