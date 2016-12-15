@@ -25,9 +25,15 @@ for (row = 0; row < 9; row++) {
     while (addr.length < 8) addr = "0" + addr;  // Add leading zeros
     field.id = "0b" + addr;           // Unique ID based on full address
     field.size = 8;                   // Holds eight characters
+    field.className = "bits data";    // Holds binary data only
     field.pattern = "[01]{8}";        // Validation: 8 binary digits
     field.placeholder = "00000000";   // Visual indicator
+    field.addEventListener("blur", blurFill);
 //  field.defaultValue = "00000000";  // Default value
     td.appendChild(field);
   }
+}
+
+function blurFill() {
+  alert("It's a start...");
 }

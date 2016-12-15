@@ -144,12 +144,12 @@ article {
     box-shadow: 8px 0 16px 8px rgba(0, 43, 70, 0.36);
 }
 
-input {
+.bits {
     font-family: monospace;
     direction: rtl;
 }
 
-input:focus {
+.bits:focus {
     font-family: monospace;
     font-weight: bold;
     direction: rtl;
