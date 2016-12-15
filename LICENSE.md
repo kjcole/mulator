@@ -1,4 +1,4 @@
-## License and Acknowledgements
+## License and Acknowledgments
 
 [Creative Commons
 License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png")
