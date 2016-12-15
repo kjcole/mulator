@@ -11,18 +11,23 @@ var addr = 0;
 var field = 0;
 
 for (row = 0; row < 9; row++) {
-    var tr = table.insertRow(-1);  // Append row (insert at bottom)
-    th = document.createElement('th');
-    th.className = "address";
-    addr = row.toString(2)+"xxx";
-    while (addr.length < 8) addr = "0" + addr;
-	th.innerHTML = addr;
-    tr.appendChild(th);
-    for (cell = 1; cell < 9; cell++) {
-	td = tr.insertCell(cell);
-	field = document.createElement("input");
-	field.size = 8;
-	field.id="qwert" + cell;
-	td.appendChild(field);
-    }
+  var tr = table.insertRow(-1);  // Append row (insert at bottom)
+  th = document.createElement('th');
+  th.className = "address";
+  addr = row.toString(2)+"xxx";  // Convert to binary with masked bits
+  while (addr.length < 8) addr = "0" + addr;  // Add leading zeros
+  th.innerHTML = addr;
+  tr.appendChild(th);
+  for (cell = 0; cell < 8; cell++) {
+    td = tr.insertCell(cell + 1);
+    field = document.createElement("input");
+    addr = row.toString(2) + cell.toString(2);  // Full address
+    while (addr.length < 8) addr = "0" + addr;  // Add leading zeros
+    field.id = "0b" + addr;           // Unique ID based on full address
+    field.size = 8;                   // Holds eight characters
+    field.pattern = "[01]{8}";        // Validation: 8 binary digits
+    field.placeholder = "00000000";   // Visual indicator
+    field.defaultValue = "00000000";  // Default value
+    td.appendChild(field);
+  }
 }
