@@ -29,10 +29,15 @@ for (row = 0; row < 9; row++) {
     field.pattern = "[01]{0,8}";      // Validation: 8 binary digits
     field.title = "Binary digits (0, 1) only";
     field.placeholder = "00000000";   // Visual indicator
-    field.addEventListener("blur", blurFill);
+    field.addEventListener("focus", selectAll);
+    field.addEventListener("blur",  blurFill);
 //  field.defaultValue = "00000000";  // Default value
     td.appendChild(field);
   }
+}
+
+function selectAll(event) {
+  event.target.select();  // Select the entire value to replace
 }
 
 function blurFill(event) {
