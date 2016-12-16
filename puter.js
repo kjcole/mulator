@@ -27,6 +27,7 @@ for (row = 0; row < 9; row++) {
     field.size = 8;                   // Holds eight characters
     field.className = "bits data";    // Holds binary data only
     field.pattern = "[01]{8}";        // Validation: 8 binary digits
+    field.title = "Binary digits (0, 1) only";
     field.placeholder = "00000000";   // Visual indicator
     field.addEventListener("blur", blurFill);
 //  field.defaultValue = "00000000";  // Default value
@@ -34,6 +35,11 @@ for (row = 0; row < 9; row++) {
   }
 }
 
-function blurFill() {
-  alert("It's a start...");
+function blurFill(event) {
+  var binary = new RegExp("^[10]+$");
+  if (binary.test(event.target.value)) {
+    while (event.target.value.length < 8)
+       event.target.value = "0" + event.target.value;
+  } else {
+    alert(event.target.value + "is not a binary number"); }
 }

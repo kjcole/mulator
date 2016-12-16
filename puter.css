@@ -10,10 +10,6 @@
  * Copyright (c) 2014 Kevin Cole <kevin.cole@gallaudet.edu>             *
  ************************************************************************/
 
-@page {
-    size: 8.5in 11in;
-}
-
 body {
     background-color: #ADBAE7;
     color: #000000;
@@ -123,7 +119,7 @@ article {
     margin: auto;
     min-height: 400px;
     padding: 10px;
-/   position: relative;  /
+    position: relative;
     top: 9px;
     width: 30%;
     float: left;
@@ -137,7 +133,7 @@ article {
     margin: auto;
     min-height: 400px;
     padding: 10px;
-/   position: relative;  /
+    position: relative;
     top: 9px;
     float: right;
     width: 65%;
