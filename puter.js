@@ -3,7 +3,8 @@
 // This "generates RAM" for the 'puter.
 //
 
-var table = document.getElementById("data");
+var data = document.getElementById("data");
+var code = document.getElementById("code");
 var tr = 0;
 var th = 0;
 var td = 0;
@@ -11,7 +12,52 @@ var addr = 0;
 var field = 0;
 
 for (row = 0; row < 9; row++) {
-  var tr = table.insertRow(-1);  // Append row (insert at bottom)
+  var tr = code.insertRow(-1);  // Append row (insert at bottom)
+  td = tr.insertCell(0);
+  field = document.createElement("input");
+  addr = 48 + row;
+  addr = addr.toString(2) + "0";    // Full address
+  while (addr.length < 8) addr = "0" + addr;  // Add leading zeros
+  field.id = "0b" + addr;           // Unique ID based on full address
+  field.size = 8;                   // Holds eight characters
+  field.className = "bits opcode";  // Holds binary data only
+  field.pattern = "[01]{0,8}";      // Validation: 8 binary digits
+  field.title = "Binary digits (0, 1) only";
+  field.placeholder = "00000000";   // Visual indicator
+  field.addEventListener("focus", selectAll);
+  field.addEventListener("blur",  blurFill);
+//field.defaultValue = "00000000";  // Default value
+  td.appendChild(field);
+
+  td = tr.insertCell(1);
+  field = document.createElement("input");
+  addr = 48 + row;
+  addr = addr.toString(2) + "1";      // Full address
+  while (addr.length < 8) addr = "0" + addr;  // Add leading zeros
+  field.id = "0b" + addr;             // Unique ID based on full address
+  field.size = 8;                     // Holds eight characters
+  field.className = "bits argument";  // Holds binary data only
+  field.pattern = "[01]{0,8}";        // Validation: 8 binary digits
+  field.title = "Binary digits (0, 1) only";
+  field.placeholder = "00000000";     // Visual indicator
+  field.addEventListener("focus", selectAll);
+  field.addEventListener("blur",  blurFill);
+//field.defaultValue = "00000000";    // Default value
+  td.appendChild(field);
+
+  td = tr.insertCell(2);
+  field = document.createElement("input");
+  addr = 48 + row;
+  addr = addr.toString(2) + "0";    // Full address
+  while (addr.length < 8) addr = "0" + addr;  // Add leading zeros
+  field.id = "c" + addr;            // Unique ID based on full address
+  field.size = 20;                  // Holds 20 characters
+  field.className = "comment";
+  td.appendChild(field);
+}
+
+for (row = 0; row < 9; row++) {
+  var tr = data.insertRow(-1);  // Append row (insert at bottom)
   th = document.createElement('th');
   th.className = "address";
   addr = row.toString(2)+"xxx";  // Convert to binary with masked bits

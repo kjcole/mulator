@@ -36,17 +36,23 @@
        <div id="cpu">
          <h2>CPU</h2>
          <form>
-           <input class="bits opcode"   size="8" />
-           <input class="bits argument" size="8" />
-           <input class="comment" size="20" /><br />
+           <table>
+             <tbody id="code">
+               <tr>
+               <th class="address">Op-Code</th>
+               <th class="address">Address</th>
+               <th class="address">Comment</th>
+               </tr>
+             </tbody>
+           </table>
          </form>
        </div>
 
        <div id="ram">
          <h2>RAM</h2>
          <form>
-       <table id="data">
-         <tbody>
+       <table>
+         <tbody id="data">
            <tr>
          <td style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
          <th class="address">xxxxx000</th>
