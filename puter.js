@@ -26,7 +26,7 @@ for (row = 0; row < 9; row++) {
     field.id = "0b" + addr;           // Unique ID based on full address
     field.size = 8;                   // Holds eight characters
     field.className = "bits data";    // Holds binary data only
-    field.pattern = "[01]{8}";        // Validation: 8 binary digits
+    field.pattern = "[01]{1,8}";      // Validation: 8 binary digits
     field.title = "Binary digits (0, 1) only";
     field.placeholder = "00000000";   // Visual indicator
     field.addEventListener("blur", blurFill);
@@ -41,5 +41,5 @@ function blurFill(event) {
     while (event.target.value.length < 8)
        event.target.value = "0" + event.target.value;
   } else {
-    alert(event.target.value + "is not a binary number"); }
+    alert("'" + event.target.value + "' is not a binary number"); }
 }
