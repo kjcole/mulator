@@ -87,22 +87,6 @@ nav ul li a {
     margin-right: 3%;
 }
 
-/*
-article {
-    background-color: #ffffff;
-    border-radius: 15px;
-    clear: both;
-    color: #548ccd;
-    margin: auto;
-    min-height: 400px;
-    padding: 10px;
-/   position: relative;  /
-    top: 9px;
-    width: 85%;
-    box-shadow: 8px 0 16px 8px rgba(0, 43, 70, 0.36);
-}
-*/
-
 article {
     clear: both;
     margin: auto;
@@ -113,6 +97,19 @@ article {
 }
 
 #cpu {
+    background-color: #ffffff;
+    border-radius: 15px;
+    clear: both;
+    color: #548ccd;
+    margin: auto;
+/*  min-height: 100px; */
+    padding: 10px;
+    top: 9px;
+    width: 98%;
+    box-shadow: 8px 0 16px 8px rgba(0, 43, 70, 0.36);
+}
+
+#instructions {
     background-color: #ffffff;
     border-radius: 15px;
     color: #548ccd;

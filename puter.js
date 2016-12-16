@@ -10,6 +10,13 @@ var th = 0;
 var td = 0;
 var addr = 0;
 var field = 0;
+var registers = ["ictr", "ireg", "acc", "gp1", "gp2", "sp"];
+
+for (i = 0; i < registers.length; i++) {
+    field = document.getElementById(registers[i]);
+    field.addEventListener("focus", selectAll);
+    field.addEventListener("blur",  blurFill);
+}
 
 for (row = 0; row < 9; row++) {
   var tr = program.insertRow(-1);  // Append row (insert at bottom)

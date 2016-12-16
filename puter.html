@@ -32,9 +32,57 @@
    </header>
 
    <article id="essence" style="margin:0px auto;" role="main">
+     <div id="cpu">
+       <h2>CPU</h2>
+       <table style="width:100%;">
+         <tbody>
+           <tr>
+             <td>Instruction Counter: </td>
+             <td><input id="ictr"
+                        size="8"
+                        class="bits data"
+                        pattern="[01]{0,8}"
+                        title="Instruction Counter"
+                        placeholder="00000000"></td>
+             <td style="width:20em;">&nbsp;</td>
+             <td>Registers: </td>
+             <td><input id="ireg"
+                        size="8"
+                        class="bits data"
+                        pattern="[01]{0,8}"
+                        title="Instruction Register"
+                        placeholder="00000000"></td>
+             <td><input id="acc"
+                        size="8"
+                        class="bits data"
+                        pattern="[01]{0,8}"
+                        title="Accumulator"
+                        placeholder="00000000"></td>
+             <td><input id="gp1"
+                        size="8"
+                        class="bits data"
+                        pattern="[01]{0,8}"
+                        title="General Purpose Register 1"
+                        placeholder="00000000"></td>
+             <td><input id="gp2"
+                        size="8"
+                        class="bits data"
+                        pattern="[01]{0,8}"
+                        title="General Purpose Register 2"
+                        placeholder="00000000"></td>
+             <td><input id="sp"
+                        size="8"
+                        class="bits data"
+                        pattern="[01]{0,8}"
+                        title="Stack Pointer"
+                        placeholder="00000000"></td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
      <div id="computer">
-       <div id="cpu">
-         <h2>CPU</h2>
+       <div id="instructions">
+         <h2>INSTRUCTIONS</h2>
          <form>
            <table>
              <tbody id="program">
