@@ -4,7 +4,7 @@
 //
 
 var data = document.getElementById("data");
-var code = document.getElementById("code");
+var program = document.getElementById("program");
 var tr = 0;
 var th = 0;
 var td = 0;
@@ -12,7 +12,7 @@ var addr = 0;
 var field = 0;
 
 for (row = 0; row < 9; row++) {
-  var tr = code.insertRow(-1);  // Append row (insert at bottom)
+  var tr = program.insertRow(-1);  // Append row (insert at bottom)
   td = tr.insertCell(0);
   field = document.createElement("input");
   addr = 48 + row;
